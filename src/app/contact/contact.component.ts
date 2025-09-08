@@ -7,13 +7,24 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
+  showPopup = false;
+  popupMessage = '';
+  popupType: 'success' | 'error' = 'success';
+
   onSubmit(form: NgForm) {
     if (form.valid) {
-      console.log('Form Data:', form.value);
-      alert('Message sent successfully!');
+      this.popupType = 'success';
+      this.popupMessage = '✅ Message sent successfully!';
+      this.showPopup = true;
       form.reset();
     } else {
-      console.log('Form is invalid');
+      this.popupType = 'error';
+      this.popupMessage = '❌ Form is invalid. Please check again.';
+      this.showPopup = true;
     }
+  }
+
+  closePopup() {
+    this.showPopup = false;
   }
 }
