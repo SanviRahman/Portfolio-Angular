@@ -8,6 +8,12 @@
   bottom: 0;
   box-shadow: 0 -4px 15px rgba(0,0,0,0.3);
   z-index: 50;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUpFooter 1s forwards;
+  animation-delay: 0.3s; /* delay to make it appear after other content */
 }
 
 .social-links {
@@ -17,6 +23,10 @@
   display: flex;
   justify-content: center;
   gap: 35px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUpFooter 0.8s forwards;
+  animation-delay: 0.5s; /* stagger animation */
 }
 
 .social-links li a {
@@ -36,18 +46,30 @@
 
 /* Hover effect */
 .social-links li a:hover {
-  color: #ff4c60;
+  color: #09a880;
 }
 
 .social-links li a:hover i {
   transform: scale(1.3);
-  color: #ff4c60;
+  color: #09a880;
 }
 
 /* Footer copyright */
 .footer-copy {
   font-size: 0.9rem;
   color: #bbb;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUpFooter 0.8s forwards;
+  animation-delay: 0.6s;
+}
+
+/* Fade-in keyframes for footer */
+@keyframes fadeInUpFooter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive */

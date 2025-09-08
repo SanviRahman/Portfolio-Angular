@@ -1,40 +1,51 @@
+/* Projects Section */
 .projects-section {
   padding: 60px 20px;
-  background: #f9f9f9;
+  background: #e0f7fa; /* Modern light cyan background */
   position: relative;
+  min-height: 500px;
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s forwards;
 }
 
+/* Section Title */
 .section-title {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 30px;
-  color: #333;
+  color: #00796b;
   font-weight: 600;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+  animation-delay: 0.2s;
 }
 
-/* Wrapper with scroll buttons */
-.projects-wrapper {
-  position: relative;
-}
-
+/* Projects Container */
 .projects-container {
   display: flex;
   gap: 20px;
-  overflow-x: auto; /* enable horizontal scrolling */
+  overflow-x: auto;
   padding: 10px 0;
   scroll-behavior: smooth;
-  scrollbar-width: none; /* Firefox scrollbar hide */
+  scrollbar-width: none;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+  animation-delay: 0.4s;
 }
 
 .projects-container::-webkit-scrollbar {
-  display: none; /* Chrome, Safari scrollbar hide */
+  display: none;
 }
 
-/* Project Card */
+/* Project Card with staggered animation */
 .project-card {
-  flex: 0 0 200px; /* smaller width for cards */
+  flex: 0 0 calc((100% - 40px) / 3);
   scroll-snap-align: start;
-  background: linear-gradient(145deg, #ffffff, #f0f0f5);
+  background: linear-gradient(145deg, #ffffff, #c8e6c9);
   border-radius: 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   padding: 20px;
@@ -42,32 +53,42 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
 }
 
+/* Add stagger using nth-child */
+.project-card:nth-child(1) { animation-delay: 0.5s; }
+.project-card:nth-child(2) { animation-delay: 0.7s; }
+.project-card:nth-child(3) { animation-delay: 0.9s; }
+.project-card:nth-child(4) { animation-delay: 1.1s; }
+.project-card:nth-child(5) { animation-delay: 1.3s; }
+.project-card:nth-child(6) { animation-delay: 1.5s; }
+
 .project-card h4 {
-  color: #ff4c60;
+  color: #00796b;
   margin-bottom: 10px;
   font-size: 1.2rem;
 }
 
 .project-card p {
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: #555;
   line-height: 1.4;
 }
 
-/* Buttons inside project cards - compact size */
 .project-card button {
   margin-top: 6px;
-  padding: 4px 10px; /* compact padding */
-  font-size: 0.75rem; /* smaller text */
+  padding: 6px 12px;
+  font-size: 0.8rem;
   border: none;
   border-radius: 6px;
-  background: #1f1f2e;
+  background: #00796b;
   color: #fff;
   cursor: pointer;
   transition: all 0.3s ease;
-  width: fit-content; /* width auto adjust to content */
+  width: fit-content;
 }
 
 .project-card button a {
@@ -76,7 +97,7 @@
 }
 
 .project-card button:hover {
-  background: #a52a39;
+  background: #004d40;
 }
 
 .project-card:hover {
@@ -89,7 +110,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(31, 31, 46, 0.85);
+  background: rgba(0, 121, 107, 0.85);
   color: #fff;
   border: none;
   font-size: 2rem;
@@ -101,7 +122,7 @@
 }
 
 .scroll-btn:hover {
-  background: #a52a39;
+  background: #004d40;
 }
 
 .scroll-btn.left {
@@ -112,30 +133,17 @@
   right: 0;
 }
 
-/* Responsive adjustments */
-@media screen and (max-width: 1024px) {
-  .project-card {
-    flex: 0 0 180px; /* smaller width for medium screens */
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .project-card {
-    flex: 0 0 100%; /* 1 card per view for mobile */
-  }
-}
-
-/* More Projects Button (outside card container) */
+/* More Projects Button */
 .more-projects-container {
-  text-align: right; /* right side align */
-  margin-top: 20px;  /* একটু কম margin */
+  text-align: right;
+  margin-top: 20px;
 }
 
 .more-projects-btn {
-  padding: 8px 16px;  /* ছোট button */
-  background-color: #1f1f2e;
+  padding: 8px 16px;
+  background-color: #00796b;
   color: #fff;
-  font-size: 0.85rem; /* ছোট text */
+  font-size: 0.85rem;
   font-weight: 500;
   border: none;
   border-radius: 8px;
@@ -149,7 +157,27 @@
 }
 
 .more-projects-btn:hover {
-  background-color: #a52a39;
+  background-color: #004d40;
   transform: translateY(-2px);
 }
 
+/* Fade-in keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+  .project-card {
+    flex: 0 0 calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project-card {
+    flex: 0 0 80%;
+  }
+}

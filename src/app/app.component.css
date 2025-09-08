@@ -3,7 +3,7 @@ html, body {
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f6fa;
+  background-color: #e0f7fa; /* Modern light cyan background */
 }
 
 /* Wrapper flex layout */
@@ -24,22 +24,22 @@ app-nav {
 /* Main content fills remaining space */
 .main-content {
   flex: 1; /* Take all remaining space */
-  padding: 60px 30px; /* Increased padding for spacious look */
-  max-width: 1400px; /* Slightly larger max width */
-  width: 95%; /* Full width with some margin */
+  padding: 60px 30px; /* Spacious padding */
+  max-width: 1400px; 
+  width: 95%; 
   margin: 0 auto;
-  background: linear-gradient(to right, #ffffff, #f0f0f5);
-  border-radius: 16px; /* Slightly larger radius */
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1); /* Softer shadow */
-  margin-top: 90px; /* Adjusted for navbar height */
-  min-height: calc(100vh - 150px); /* Ensures main content is large enough */
+  background: linear-gradient(135deg, #ffffff, #c8e6c9); /* Modern gradient */
+  border-radius: 20px; /* Larger radius */
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12); /* Softer shadow */
+  margin-top: 90px; /* Space for navbar */
+  min-height: calc(100vh - 150px);
   transition: all 0.3s ease;
 }
 
 /* Footer styling */
 app-footer {
   width: 100%;
-  margin-top: auto; /* push footer to bottom */
+  margin-top: auto; /* Push footer to bottom */
 }
 
 /* Responsive adjustments */
@@ -53,7 +53,7 @@ app-footer {
 @media screen and (max-width: 768px) {
   .main-content {
     padding: 30px 15px;
-    border-radius: 12px;
+    border-radius: 16px;
     margin-top: 70px;
   }
 }

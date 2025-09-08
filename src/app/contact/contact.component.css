@@ -1,0 +1,125 @@
+/* Contact Section with fade-in animation */
+.contact-section {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 50px 30px;
+  background: linear-gradient(135deg, #e0f7fa, #c8e6c9);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s forwards;
+}
+
+/* Section Title animation */
+.section-title {
+  font-size: 2.5rem;
+  color: #00796b;
+  margin-bottom: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+  animation-delay: 0.2s;
+}
+
+/* Form animation */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+  animation-delay: 0.4s;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #004d40;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 1px solid #b2dfdb;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  outline: none;
+  width: 95%;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #00796b;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  padding: 12px 25px;
+  background-color: #00796b;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  width: 20%;
+  align-self: flex-start;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards;
+  animation-delay: 1s;
+}
+
+button:hover {
+  background-color: #004d40;
+  transform: translateY(-2px);
+}
+
+.error {
+  font-size: 0.85rem;
+  color: #ff4c60;
+  margin-top: 4px;
+}
+
+/* Fade-in keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .contact-section {
+    padding: 45px 25px;
+  }
+  button {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-section {
+    padding: 40px 20px;
+  }
+  button {
+    width: 100%;
+    align-self: center;
+  }
+}

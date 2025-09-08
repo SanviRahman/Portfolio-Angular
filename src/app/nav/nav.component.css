@@ -1,12 +1,26 @@
 /* Navbar general styling */
 .navbar {
   width: 100%;
-  background-color: #1f1f2e;
+  background-color: #026356; /* Modern teal */
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  transition: background 0.3s ease;
+
+  /* Animation */
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: fadeInDownNavbar 1s forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeInDownNavbar {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .nav-container {
@@ -19,17 +33,29 @@
   height: 70px;
 }
 
+/* Logo */
 .logo a {
   color: #fff;
   font-size: 1.8rem;
   font-weight: bold;
   text-decoration: none;
+  transition: color 0.3s;
+}
+.logo a:hover {
+  color: #c8e6c9; /* Soft accent on hover */
 }
 
+/* Nav links */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 25px;
+
+  /* Animation for links */
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInDownNavbar 0.8s forwards;
+  animation-delay: 0.5s; /* stagger after navbar */
 }
 
 .nav-links li a {
@@ -45,7 +71,7 @@
   position: absolute;
   width: 0;
   height: 2px;
-  background-color: #ff4c60;
+  background-color: #c8e6c9;
   left: 0;
   bottom: -4px;
   transition: 0.3s;
@@ -79,7 +105,7 @@
     top: 70px;
     left: -100%;
     width: 100%;
-    background-color: #1f1f2e;
+    background-color: #00796b; /* Match navbar background */
     flex-direction: column;
     gap: 20px;
     padding: 20px 0;
