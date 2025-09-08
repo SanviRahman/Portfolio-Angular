@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  fullText = 'Sheikh Forid Ahmed Shanto';
+  texts = ['Sheikh Forid Ahmed Shanto', 'Jr. Software Engineer']; // texts array
   typedText = '';
+  textIndex = 0; // কোন text চলবে
+  charIndex = 0; // text এর char index
   isDeleting = false;
   speed = 150;
 
@@ -27,29 +29,30 @@ export class HomeComponent implements OnInit {
     });
   }
 
-
   typeWriterLoop() {
+    const currentText = this.texts[this.textIndex];
+
     if (!this.isDeleting) {
       // typing
-      if (this.typedText.length < this.fullText.length) {
-        this.typedText += this.fullText.charAt(this.typedText.length);
+      if (this.charIndex < currentText.length) {
+        this.typedText += currentText.charAt(this.charIndex);
+        this.charIndex++;
         setTimeout(() => this.typeWriterLoop(), this.speed);
-      } 
-      else {
+      } else {
         // pause at full text
         this.isDeleting = true;
         setTimeout(() => this.typeWriterLoop(), 1000);
       }
-    } 
-    else {
+    } else {
       // deleting
-      if (this.typedText.length > 0) {
-        this.typedText = this.typedText.slice(0, -1);
+      if (this.charIndex > 0) {
+        this.typedText = currentText.substring(0, this.charIndex - 1);
+        this.charIndex--;
         setTimeout(() => this.typeWriterLoop(), this.speed / 2);
-      } 
-      else {
-        // reset for next loop
+      } else {
+        // move to next text
         this.isDeleting = false;
+        this.textIndex = (this.textIndex + 1) % this.texts.length;
         setTimeout(() => this.typeWriterLoop(), 400);
       }
     }

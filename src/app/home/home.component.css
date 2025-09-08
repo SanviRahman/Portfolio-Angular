@@ -27,7 +27,7 @@
 .intro-text h1 {
   animation-delay: 0.2s;
   font-size: 2.5rem;
-  color: #00796b;
+  color: #065c52;
   /* Modern teal */
   margin: 0;
 }
@@ -35,7 +35,7 @@
 .intro-text h2 {
   animation-delay: 1s;
   font-size: 1.8rem;
-  color: #004d40;
+  color: #08362f;
   /* Darker teal accent */
   margin-bottom: 20px;
 }
