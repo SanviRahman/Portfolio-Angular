@@ -1,0 +1,59 @@
+/* Full height layout */
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f6fa;
+}
+
+/* Wrapper flex layout */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Navbar */
+app-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* Main content fills remaining space */
+.main-content {
+  flex: 1; /* Take all remaining space */
+  padding: 60px 30px; /* Increased padding for spacious look */
+  max-width: 1400px; /* Slightly larger max width */
+  width: 95%; /* Full width with some margin */
+  margin: 0 auto;
+  background: linear-gradient(to right, #ffffff, #f0f0f5);
+  border-radius: 16px; /* Slightly larger radius */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1); /* Softer shadow */
+  margin-top: 90px; /* Adjusted for navbar height */
+  min-height: calc(100vh - 150px); /* Ensures main content is large enough */
+  transition: all 0.3s ease;
+}
+
+/* Footer styling */
+app-footer {
+  width: 100%;
+  margin-top: auto; /* push footer to bottom */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+  .main-content {
+    padding: 40px 20px;
+    margin-top: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-content {
+    padding: 30px 15px;
+    border-radius: 12px;
+    margin-top: 70px;
+  }
+}

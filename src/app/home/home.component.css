@@ -1,0 +1,135 @@
+/* Hero Section */
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 60px 40px;
+  margin: 30px auto;
+  background: linear-gradient(135deg, #ffffff, #f0f0f5);
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  max-width: 1200px;
+  transition: all 0.3s ease;
+}
+
+/* Intro Text */
+.intro-text h1, .intro-text h2, .resume-btn {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+}
+
+.intro-text h1 { animation-delay: 0.2s; font-size: 2.5rem; color: #1f1f2e; margin: 0; }
+.intro-text h2 { animation-delay: 1s; font-size: 1.8rem; color: #ff4c60; margin-bottom: 20px; }
+.resume-btn { animation-delay: 1.4s; }
+
+/* Typewriter */
+/* Typewriter without blinking cursor */
+.typewriter-name {
+  font-size: 1.5rem;
+  color: #555;
+  white-space: nowrap;
+  overflow: hidden;
+  /* border-right: 3px solid #ff4c60; <-- remove this line */
+  margin: 10px 0;
+  /* remove blinkCursor animation */
+}
+
+
+/* Profile Image */
+.intro-image img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ff4c60;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+/* Resume Button */
+.resume-btn {
+  display: inline-block;
+  padding: 14px 30px;
+  background-color: #1f1f2e;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: #a52a39;
+  transform: translateY(-3px);
+}
+
+/* Fade-in Animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Typewriter */
+@keyframes blinkCursor {
+  0%,49% { border-color: #ff4c60; }
+  50%,100% { border-color: transparent; }
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+  .intro-section { padding: 50px 30px; }
+  .intro-image img { width: 220px; height: 220px; }
+}
+
+@media screen and (max-width: 768px) {
+  .intro-section {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .intro-image img { width: 200px; height: 200px; margin-bottom: 20px; }
+}
+
+/* Fade-in animation for text and image */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 1s forwards;
+}
+
+/* Delay for intro-text and intro-image separately */
+.intro-text.fade-in { animation-delay: 0.2s; }
+.intro-image.fade-in { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Profile Image Styling */
+.intro-image img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ff4c60;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.intro-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+

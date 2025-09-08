@@ -1,0 +1,155 @@
+.projects-section {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  position: relative;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Wrapper with scroll buttons */
+.projects-wrapper {
+  position: relative;
+}
+
+.projects-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* enable horizontal scrolling */
+  padding: 10px 0;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox scrollbar hide */
+}
+
+.projects-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari scrollbar hide */
+}
+
+/* Project Card */
+.project-card {
+  flex: 0 0 200px; /* smaller width for cards */
+  scroll-snap-align: start;
+  background: linear-gradient(145deg, #ffffff, #f0f0f5);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card h4 {
+  color: #ff4c60;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.project-card p {
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* Buttons inside project cards - compact size */
+.project-card button {
+  margin-top: 6px;
+  padding: 4px 10px; /* compact padding */
+  font-size: 0.75rem; /* smaller text */
+  border: none;
+  border-radius: 6px;
+  background: #1f1f2e;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content; /* width auto adjust to content */
+}
+
+.project-card button a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.project-card button:hover {
+  background: #a52a39;
+}
+
+.project-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Scroll buttons */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(31, 31, 46, 0.85);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.scroll-btn:hover {
+  background: #a52a39;
+}
+
+.scroll-btn.left {
+  left: 0;
+}
+
+.scroll-btn.right {
+  right: 0;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+  .project-card {
+    flex: 0 0 180px; /* smaller width for medium screens */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .project-card {
+    flex: 0 0 100%; /* 1 card per view for mobile */
+  }
+}
+
+/* More Projects Button (outside card container) */
+.more-projects-container {
+  text-align: right; /* right side align */
+  margin-top: 20px;  /* একটু কম margin */
+}
+
+.more-projects-btn {
+  padding: 8px 16px;  /* ছোট button */
+  background-color: #1f1f2e;
+  color: #fff;
+  font-size: 0.85rem; /* ছোট text */
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.more-projects-btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.more-projects-btn:hover {
+  background-color: #a52a39;
+  transform: translateY(-2px);
+}
+

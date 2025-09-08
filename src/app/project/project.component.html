@@ -1,0 +1,74 @@
+<section class="projects-section">
+  <h1 class="section-title">Projects</h1>
+
+  <div class="projects-wrapper">
+    <!-- Left scroll button -->
+    <button class="scroll-btn left" (click)="scrollProjects(-300)">&#10094;</button>
+
+    <!-- Projects container -->
+    <div class="projects-container" #projectsContainer>
+      <div class="project-card">
+        <h4>Daily Basis</h4>
+        <p style="text-align: justify;">
+          A daily basis involves routine activities like personal care, work, exercise, and leisure...
+        </p>
+        <button><a href="https://sheikhshanto.xyz/authentication/">Live</a></button>
+        <button><a href="https://github.com/SanviRahman/Daily-Basis">Github Code</a></button>
+      </div>
+
+      <div class="project-card">
+        <h4>IT Services</h4>
+        <p style="text-align: justify;">
+          IT services provide essential technology solutions, including technical support, cloud computing...
+        </p>
+        <button><a href="https://django1-inky.vercel.app/">Live</a></button>
+        <button><a href="https://github.com/SanviRahman/IT_SERVICES">Github Code</a></button>
+
+      </div>
+
+      <div class="project-card">
+        <h4>CRUD Operation</h4>
+        <p style="text-align: justify;">
+          CRUD operations in Angular are the backbone of handling dynamic data in web applications...
+        </p>
+        <button><a href="https://github.com/SanviRahman/CRUD_WithService-Angular">Github Code</a></button>
+      </div>
+
+      <div class="project-card">
+        <h4>Blog API</h4>
+        <p style="text-align: justify;">
+          A Blog API in Django allows developers to manage and interact with blog data through RESTful endpoints...
+        </p>
+        <button><a href="https://github.com/SanviRahman/Blog_api">Github Code</a></button>
+      </div>
+
+      <div class="project-card">
+        <h4>IT Services</h4>
+        <p style="text-align: justify;">
+          IT services provide essential technology solutions, including technical support, cloud computing...
+        </p>
+        <button><a href="https://github.com/SanviRahman/IT_SERVICES">Github Code</a></button>
+      </div>
+
+      <div class="project-card">
+        <h4>Daily Basis</h4>
+        <p style="text-align: justify;">
+          A daily basis involves routine activities like personal care, work, exercise, and leisure...
+        </p>
+        <button><a href="https://github.com/SanviRahman/Daily-Basis">Github Code</a></button>
+      </div>
+    </div>
+
+
+    <!-- Right scroll button -->
+    <button class="scroll-btn right" (click)="scrollProjects(300)">&#10095;</button>
+  </div>
+
+  <!-- Find More Projects Button Outside Section -->
+  <div class="more-projects-container">
+    <button class="more-projects-btn">
+      <a href="https://github.com/SanviRahman?tab=repositories">Find More Projects</a>
+    </button>
+  </div>
+
+</section>
