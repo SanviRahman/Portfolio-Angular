@@ -42,34 +42,20 @@ app-footer {
 }
 
 /* Responsive adjustments */
-/* @media screen and (max-width: 1024px) {
-  .main-content {
-    padding: 40px 20px;
-    margin-top: 80px;
-  }
-}
 
 @media screen and (max-width: 768px) {
   .main-content {
     padding: 30px 15px;
     border-radius: 16px;
     margin-top: 70px;
-  }
-} */
-
-@media screen and (max-width: 768px) {
-  .main-content {
-    padding: 30px 15px;
-    border-radius: 16px;
-    margin-top: 70px;
-    min-height: auto;         /* viewport height ব্যবহার করবে না */
+    min-height: auto;       
   }
 
   .app-wrapper {
-    min-height: 100%;         /* root এর সাথে match করবে */
+    min-height: 100%;         
   }
 
   html, body {
-    height: auto;             /* body অযথা বড় হবে না */
+    height: auto;          
   }
 }
