@@ -6,6 +6,11 @@ html, body {
   background-color: #e0f7fa; /* Modern light cyan background */
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 /* Wrapper flex layout */
 .app-wrapper {
   display: flex;
@@ -40,6 +45,21 @@ app-footer {
   width: 100%;
   margin-top: auto; /* Push footer to bottom */
 }
+
+
+/* hidden অবস্থা */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+/* visible হলে */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
