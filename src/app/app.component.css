@@ -42,7 +42,6 @@ app-footer {
 }
 
 /* Responsive adjustments */
-
 @media screen and (max-width: 768px) {
   .main-content {
     padding: 30px 15px;
@@ -52,7 +51,7 @@ app-footer {
   }
 
   .app-wrapper {
-    min-height: 100%;         
+    min-height: 40%;         
   }
 
   html, body {

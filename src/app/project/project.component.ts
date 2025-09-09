@@ -10,18 +10,25 @@ export class ProjectComponent implements AfterViewInit, OnDestroy {
   private autoScrollInterval: any;
 
   ngAfterViewInit() {
-    this.autoScrollInterval = setInterval(() => {
-      if (this.projectsContainer) {
-        const container = this.projectsContainer.nativeElement;
-        const maxScrollLeft = container.scrollWidth - container.clientWidth;
+    const container = this.projectsContainer.nativeElement;
+    let scrollAmount = 0;
+    const scrollStep = 2; // scroll speed
+    const delay = 10; // interval time in ms
 
-        if (container.scrollLeft >= maxScrollLeft) {
-          container.scrollTo({ left: 0, behavior: 'smooth' }); 
-        } else {
-          container.scrollBy({ left: 300, behavior: 'smooth' });
-        }
+    this.autoScrollInterval = setInterval(() => {
+      const maxScrollLeft = container.scrollWidth - container.clientWidth;
+
+      if (scrollAmount >= maxScrollLeft) {
+        scrollAmount = 0; // loop back
+      } else {
+        scrollAmount += scrollStep;
       }
-    }, 3000);
+
+      container.scrollTo({
+        left: scrollAmount,
+        behavior: 'smooth'
+      });
+    }, delay);
   }
 
   ngOnDestroy() {

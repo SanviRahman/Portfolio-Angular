@@ -109,7 +109,8 @@
     background-color: #00796b; /* Match navbar background */
     flex-direction: column;
     gap: 20px;
-    padding: 20px 0;
+    padding: 20px; /* add padding to avoid touching left/right edges */
+    box-sizing: border-box; /* ensure padding works correctly */
     transition: 0.3s;
   }
 
@@ -119,5 +120,11 @@
 
   .hamburger {
     display: flex;
+  }
+
+  /* Add extra padding for logo container */
+  .nav-container {
+    padding-left: 15px; /* left gap */
+    padding-right: 15px; /* right gap */
   }
 }
