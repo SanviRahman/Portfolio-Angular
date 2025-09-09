@@ -39,6 +39,7 @@
 .about-image {
   flex: 1 1 40%;
   text-align: center;
+  cursor: pointer;
 }
 
 .about-image img {
