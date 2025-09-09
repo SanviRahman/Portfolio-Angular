@@ -1,7 +1,7 @@
 /* Projects Section */
 .projects-section {
   padding: 60px 20px;
-  background: #e0f7fa; /* Modern light cyan background */
+  background: #e0f7fa;
   position: relative;
   min-height: 500px;
   border-radius: 5px;
@@ -35,13 +35,14 @@
   transform: translateY(20px);
   animation: fadeInUp 0.8s forwards;
   animation-delay: 0.4s;
+  scroll-snap-type: x mandatory;
 }
 
 .projects-container::-webkit-scrollbar {
   display: none;
 }
 
-/* Project Card with staggered animation */
+/* Project Card */
 .project-card {
   flex: 0 0 calc((100% - 40px) / 3);
   scroll-snap-align: start;
@@ -58,24 +59,23 @@
   animation: fadeInUp 0.6s forwards;
 }
 
-/* Add stagger using nth-child */
-.project-card:nth-child(1) { animation-delay: 0.5s; }
-.project-card:nth-child(2) { animation-delay: 0.7s; }
-.project-card:nth-child(3) { animation-delay: 0.9s; }
-.project-card:nth-child(4) { animation-delay: 1.1s; }
-.project-card:nth-child(5) { animation-delay: 1.3s; }
-.project-card:nth-child(6) { animation-delay: 1.5s; }
-
 .project-card h4 {
   color: #00796b;
   margin-bottom: 10px;
   font-size: 1.2rem;
 }
 
+.project-card h5 {
+  color: black;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
 .project-card p {
   font-size: 0.85rem;
   color: #555;
   line-height: 1.4;
+  margin-top: 0;
 }
 
 .project-card button {
@@ -103,34 +103,6 @@
 .project-card:hover {
   transform: translateY(-8px) scale(1.05);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
-
-/* Scroll buttons */
-.scroll-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0, 121, 107, 0.85);
-  color: #fff;
-  border: none;
-  font-size: 2rem;
-  cursor: pointer;
-  padding: 8px 12px;
-  border-radius: 50%;
-  z-index: 10;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.scroll-btn:hover {
-  background: #004d40;
-}
-
-.scroll-btn.left {
-  left: 0;
-}
-
-.scroll-btn.right {
-  right: 0;
 }
 
 /* More Projects Button */
@@ -169,7 +141,7 @@
   }
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media screen and (max-width: 1024px) {
   .project-card {
     flex: 0 0 calc((100% - 30px) / 2);
