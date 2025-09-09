@@ -23,19 +23,18 @@ app-nav {
 
 /* Main content fills remaining space */
 .main-content {
-  flex: 1; /* Take all remaining space */
-  padding: 60px 30px; /* Spacious padding */
-  max-width: 1400px; 
-  width: 95%; 
+  flex: 1;
+  padding: 60px 30px;
+  max-width: 1400px;
+  width: 95%;
   margin: 0 auto;
-  background: linear-gradient(135deg, #ffffff, #c8e6c9); /* Modern gradient */
-  border-radius: 20px; /* Larger radius */
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12); /* Softer shadow */
-  margin-top: 90px; /* Space for navbar */
-  min-height: calc(100vh - 150px);
+  background: linear-gradient(135deg, #ffffff, #c8e6c9);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  margin-top: 90px;
+  min-height: calc(100vh - 150px); /* default */
   transition: all 0.3s ease;
 }
-
 /* Footer styling */
 app-footer {
   width: 100%;
@@ -43,7 +42,7 @@ app-footer {
 }
 
 /* Responsive adjustments */
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
   .main-content {
     padding: 40px 20px;
     margin-top: 80px;
@@ -55,5 +54,22 @@ app-footer {
     padding: 30px 15px;
     border-radius: 16px;
     margin-top: 70px;
+  }
+} */
+
+@media screen and (max-width: 768px) {
+  .main-content {
+    padding: 30px 15px;
+    border-radius: 16px;
+    margin-top: 70px;
+    min-height: auto;         /* viewport height ব্যবহার করবে না */
+  }
+
+  .app-wrapper {
+    min-height: 100%;         /* root এর সাথে match করবে */
+  }
+
+  html, body {
+    height: auto;             /* body অযথা বড় হবে না */
   }
 }
