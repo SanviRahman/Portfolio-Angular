@@ -78,6 +78,13 @@
   .social-links {
     flex-direction: column;
     gap: 15px;
-    margin-left: 20px;
+    margin: 0 auto; /* auto margin to center */
+    padding-left: 0; /* left padding remove */
+    text-align: center;
+  }
+
+  .social-links li {
+    display: flex;
+    justify-content: center;
   }
 }
