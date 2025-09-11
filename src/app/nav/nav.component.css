@@ -62,7 +62,7 @@
 .nav-links li a {
   color: #fff;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 750;
   position: relative;
   transition: 0.3s;
 }
@@ -103,14 +103,14 @@
 @media screen and (max-width: 768px) {
   .nav-links {
     position: absolute;
-    top: 70px;
+    top: 52px;
     left: -100%;
-    width: 100%;
-    background-color: #00796b; /* Match navbar background */
+    width: 30%;
+    background-color: #026356;
     flex-direction: column;
     gap: 20px;
-    padding: 20px; /* add padding to avoid touching left/right edges */
-    box-sizing: border-box; /* ensure padding works correctly */
+    padding: 20px; 
+    box-sizing: border-box;
     transition: 0.3s;
   }
 

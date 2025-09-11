@@ -5,7 +5,7 @@
   padding: 50px 30px;
   background: linear-gradient(135deg, #e0f7fa, #c8e6c9);
   border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
   text-align: center;
   opacity: 0;
   transform: translateY(40px);
@@ -54,7 +54,7 @@ form {
 .form-group input:focus,
 .form-group textarea:focus {
   border-color: #00796b;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
 }
 
 textarea {
@@ -95,7 +95,7 @@ button:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -108,7 +108,7 @@ button:hover {
   padding: 30px 40px;
   border-radius: 12px;
   text-align: center;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
   max-width: 400px;
   width: 90%;
   animation: fadeInUp 0.6s ease;
@@ -148,6 +148,7 @@ button:hover {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -159,6 +160,7 @@ button:hover {
   .contact-section {
     padding: 45px 25px;
   }
+
   button {
     width: 30%;
   }
@@ -168,6 +170,7 @@ button:hover {
   .contact-section {
     padding: 40px 20px;
   }
+
   button {
     width: 100%;
     align-self: center;
