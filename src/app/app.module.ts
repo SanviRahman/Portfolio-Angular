@@ -11,6 +11,7 @@ import { ContactComponent } from './contact/contact.component';
 import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EducationComponent } from './education/education.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProjectComponent,
     ContactComponent,
     NavComponent,
-    FooterComponent
+    FooterComponent,
+    EducationComponent
   ],
   imports: [
     BrowserModule,
