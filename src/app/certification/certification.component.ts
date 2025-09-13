@@ -1,11 +1,11 @@
-import { Component,ElementRef,ViewChildren,QueryList  } from '@angular/core';
+import { Component, AfterViewInit, ViewChildren, QueryList, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-certification',
   templateUrl: './certification.component.html',
   styleUrls: ['./certification.component.css']
 })
-export class CertificationComponent {
+export class CertificationComponent implements AfterViewInit {
   @ViewChildren('animatedElement') animatedElements!: QueryList<ElementRef>;
 
   ngAfterViewInit(): void {
