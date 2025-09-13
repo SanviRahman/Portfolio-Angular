@@ -1,182 +1,70 @@
-.about-section {
-  padding: 60px 20px;
+.skill-section {
+  padding: 60px 40px;
   background: linear-gradient(135deg, #e0f7fa, #c8e6c9);
-  text-align: center;
   border-radius: 20px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
-
-  /* Page load animation */
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeInUp 1s forwards;
-  animation-delay: 0.2s;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Section Title */
 .section-title {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 35px;
   color: #00796b;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s forwards;
-  animation-delay: 0.4s;
+  font-weight: 600;
 }
 
-/* Container for siblings */
-.about-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
-  flex-wrap: wrap;
-}
 
-/* Profile Card */
-.profile-card {
-  background: #d6d3d3;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s forwards;
-  animation-delay: 0.6s;
-}
-
-.profile-card img {
-  width: 250px;
-  border-radius: 16px;
-  max-width: 100%;
-  border: 4px solid #00796b;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.profile-card:hover img {
-  transform: scale(1.05);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-}
-
-/* Sibling 2 (Skill Cards Grid) */
-.sibling-2 {
-  flex: 2;
+.skill-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-/* Skill Cards (ছোট করা হলো) */
+/* Card Design */
 .skill-card {
-  background: #ffffff;
-  padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  /* Initial state */
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s forwards;
+  background: linear-gradient(145deg, #ffffff, #c8e6c9);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  padding: 25px; /* padding বাড়ানো হলো */
+  text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Stagger animation */
-.skill-card:nth-child(1) {
-  animation-delay: 0.6s;
-}
-
-.skill-card:nth-child(2) {
-  animation-delay: 0.8s;
-}
-
-.skill-card:nth-child(3) {
-  animation-delay: 1s;
-}
-
-.skill-card:nth-child(4) {
-  animation-delay: 1.2s;
-}
-
-.skill-card:nth-child(5) {
-  animation-delay: 1.4s;
-}
-
-.skill-card:nth-child(6) {
-  animation-delay: 1.6s;
-}
-
-.skill-card:nth-child(7) {
-  animation-delay: 1.8s;
-}
-
-.skill-card:nth-child(8) {
-  animation-delay: 2s;
-}
-
-.skill-card:nth-child(9) {
-  animation-delay: 2.2s;
-}
-
-/* Hover effect */
-.skill-card:hover {
-  transform: translateY(-6px) scale(1.05);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  width: 100%;
+  max-width: 220px; /* card একটু বড় */
+  margin: 0 auto;
 }
 
 .skill-card img {
-  width: 120px;
-  height: 120px;
+  border-radius: 10px;
+  width: 85px;  /* image বড় করা হলো */
+  height: 85px;
   object-fit: contain;
-  max-width: 90%;
   transition: transform 0.3s ease;
 }
 
-.skill-card:hover img {
-  transform: scale(1.40);
+/* Hover Effect */
+.skill-card:hover {
+  transform: scale(1.05) translateY(-6px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.2);
 }
 
-/* Animation Keyframes */
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.skill-card:hover img {
+  transform: scale(1.12);
 }
 
 /* Responsive */
-@media (max-width: 992px) {
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .sibling-2 {
-    grid-template-columns: repeat(2, 1fr);
-    width: 100%;
-    max-width: 600px;
+@media screen and (max-width: 768px) {
+  .skill-container {
+    grid-template-columns: repeat(2, 1fr); /* Tablet/Mobile এ ২ কলাম */
   }
 }
 
-@media (max-width: 600px) {
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .profile-card img {
-    width: 180px;
-  }
-
-  .sibling-2 {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  .skill-card img {
-    width: 80px;
-    height: 80px;
+@media screen and (max-width: 480px) {
+  .skill-container {
+    grid-template-columns: 1fr; /* Extra small এ ১ কলাম */
   }
 }

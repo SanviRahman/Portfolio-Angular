@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '**', redirectTo: '', pathMatch: 'full' } // সব path root এ যাবে
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({
