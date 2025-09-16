@@ -1,6 +1,6 @@
 /* Contact Section with fade-in animation */
 .contact-section {
-  max-width: 800px;
+  max-width: 100%;
   margin: 50px auto;
   padding: 50px 30px;
   background: linear-gradient(135deg, #e0f7fa, #c8e6c9);
